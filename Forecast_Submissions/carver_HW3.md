@@ -1,6 +1,13 @@
 ### *Monique Carver*
 **Assignment 3**
 **09/13/2021**
+___
+### Grade
+3/3: Nice job, glad you could get this done!
+- Nice markdown formatting
+- Check the solution for question 4 to see how to do this one.
+
+_____
 
 I chose my predictions for this week based on the flow data from the years 2018-present. I also used the rain predictions to make my estimate.
 
