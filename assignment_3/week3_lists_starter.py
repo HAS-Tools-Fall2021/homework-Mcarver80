@@ -64,12 +64,57 @@ ilist = []
 # and adding the index value to the ilist
 # if it meets some criteria that I specify
 for i in range(len(flow)):
-        if flow [i] > 600 and month[i] == 7:
+        if flow [i] > 156 and month[i] == 9:
                 ilist.append(i)
 
 # see how many times the criteria was met by checking the length
 # of the index list that was generated
 print(len(ilist))
+
+
+s9list = []
+
+# Loop over the length of the flow list
+# and adding the index value to the ilist
+# if it meets some criteria that I specify
+for i in range(len(flow)):
+        if month[i] == 9:
+                s9list.append(i)
+
+# see how many times the criteria was met by checking the length
+# of the index list that was generated
+print(len(s9list))
+
+len(ilist)/len(s9list)*100
+
+year2010list = []
+
+# Loop over the length of the flow list
+# and adding the index value to the ilist
+# if it meets some criteria that I specify
+for i in range(len(flow)):
+        if flow [i] > 156 and month[i] == 9 and year[i]<2010:
+                year2010list.append(i)
+
+# see how many times the criteria was met by checking the length
+# of the index list that was generated
+print(len(year2010list))
+
+len(year2010list)/len(s9list)*100
+
+q4list = []
+
+# Loop over the length of the flow list
+# and adding the index value to the ilist
+# if it meets some criteria that I specify
+for i in range(len(flow)):
+        if month[i] == 9 and day[i]<=15:
+                q4list.append(i)
+
+# see how many times the criteria was met by checking the length
+# of the index list that was generated
+print(np.mean(flow))
+
 
 # Grabbing out the data that met the criteria
 # This  subset of data is just the elements identified
