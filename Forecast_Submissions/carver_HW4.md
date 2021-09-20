@@ -2,6 +2,12 @@
 **Assignment 4**
 **09/20/2021**
 
+## Grade
+1/3: I don't see your python script here? 
+- I'm not grading your markdown but I still need to see the work to answer the questions. 
+- also good try with the markdown formatting but note that some of it is not coming out quite right. Make sure you preview your markdown before you submit. 
+______
+
 **1.	Provide a summary of the forecast values you picked and why. Include discussion of the quantitative analysis that led to your prediction. This can include any analysis you complete but must include at least two histograms and some quantitative discussion of flow quantiles that helped you make your decision.**
 My estimate for this week’s streamflow gauge was based on current weather forecasts and the data from 2020, 2019, and 2018. 
 
