@@ -32,3 +32,36 @@ data['day'] = data['day'].astype(int)
 # %%
 # Sorry no more helpers past here this week, you are on your own now :)
 # Hints - you will need the functions: describe, info, groupby, sort, head and tail.
+
+
+#question 2
+#use .describe
+data.columns
+flow=data["flow"]
+np.mean(flow)
+flow.mean()
+flow.describe()
+# %%
+
+data_group=data.groupby(["month"])
+groupflow=data_group["flow"]
+groupflow.mean()
+data.head(5)
+data.tail(10)
+
+datasort=data.sort_values(by="flow", ascending = True)
+datasort.head(5)
+
+#question 5
+#Create space for min/max each month
+maxyears=np.zeros(12)
+minyears=np.zeros(12)
+
+#month+1=Jan
+for month in range(12):
+        print(month) 
+        monthdata=data[data["month"]==(month+1)]
+        datasort=monthdata.sort_values(by="flow", ascending = True)
+        minyears[month]=datasort["year"].head(1)
+        maxyears[month]=datasort["year"].tail(1)
+# %%
