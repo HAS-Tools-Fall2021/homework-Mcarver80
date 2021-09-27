@@ -15,7 +15,7 @@ filepath = os.path.join('data', filename)
 print(os.getcwd())
 print(filepath)
 
-filepath = '../data/streamflow_week2.txt'
+filepath = '../data/streamflow_week5.txt'
 
 # %%
 # Read the data into a pandas dataframe
@@ -47,10 +47,11 @@ data_group=data.groupby(["month"])
 groupflow=data_group["flow"]
 groupflow.mean()
 data.head(5)
-data.tail(10)
+data.tail(5)
 
 datasort=data.sort_values(by="flow", ascending = True)
 datasort.head(5)
+datasort.tail(5)
 
 #question 5
 #Create space for min/max each month
@@ -64,4 +65,5 @@ for month in range(12):
         datasort=monthdata.sort_values(by="flow", ascending = True)
         minyears[month]=datasort["year"].head(1)
         maxyears[month]=datasort["year"].tail(1)
+
 # %%
