@@ -2,6 +2,9 @@
 **Assigment 5**
 
 **9/27/2021**
+______
+## Grade
+2/3: Nice work. I know this was a hard one. A lot of people didn't get all of the quesitons just so you know. I subtrarcted one point though because you didn't include yourr python file in the submissions folder. I reminded everyone in class you need to submit both your markdown and a python file.  
 
 **Explanation for this week's predictions:**
 
