@@ -7,6 +7,7 @@
 
 My forecast streamflow predictions for this week were based on the plots that I created. 
 
+*The plots are located within the Forecast Submissions folder and are named "Observed_Flow#1,2,3,4,5,6".*
 
 #1 
 
