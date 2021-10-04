@@ -46,8 +46,8 @@ flow.describe()
 data_group=data.groupby(["month"])
 groupflow=data_group["flow"]
 groupflow.mean()
-data.head(5)
-data.tail(5)
+data.head(1)
+data.tail(1)
 
 datasort=data.sort_values(by="flow", ascending = True)
 datasort.head(5)
