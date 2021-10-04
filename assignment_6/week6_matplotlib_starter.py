@@ -6,7 +6,6 @@
 import os
 import numpy as np
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
 import datetime
 # note you may need to do pip install for sklearn
@@ -14,7 +13,7 @@ import datetime
 # %%
 # ** MODIFY **
 # Set the file name and path to where you have stored the data
-filename = 'streamflow_week2.txt'
+filename = 'streamflow_week6.txt'
 filepath = os.path.join('../data', filename)
 print(os.getcwd())
 print(filepath)
@@ -38,24 +37,33 @@ data['dayofweek'] = pd.DatetimeIndex(data['datetime']).dayofweek
 
 # 1. Timeseries of observed weekly flow values
 fig, ax = plt.subplots()
-ax.plot(data['datetime'], data['flow'], color='green',
-        linestyle='dashed', label='daily')
+ax.plot(data['datetime'], data['flow'], color='yellow',
+        linestyle='solid', label='daily')
 ax.set(title="Observed Flow", xlabel="Date", 
         ylabel="Daily Avg Flow [cfs]",
         yscale='log')
 ax.legend()
+
+
+
+
+
 # an example of saving your figure to a file
 fig.set_size_inches(5,3)
-fig.savefig("Observed_Flow.png")
+fig.savefig("Observed_Flow#1.png")
 
 
 #2. Time series of flow values with the x axis range limited
 fig, ax = plt.subplots()
-ax.plot(data['datetime'], data['flow'], label='flow')
+ax.plot(data['datetime'], data['flow'], label='flow',color='green')
 ax.set(title="Observed Flow", xlabel="Date", ylabel="Weekly Avg Flow [cfs]",
-        yscale='log', xlim=[datetime.date(2000, 1, 26), datetime.date(2014, 2, 1)])
+        yscale='log', xlim=[datetime.date(2018, 10, 1), datetime.date(2018, 10, 30)])
 ax.legend()
 plt.show()
+
+fig.set_size_inches(10,3)
+fig.savefig("Observed_Flow#2.png")
+
 
 
 #3 Boxplot of flows by month 
@@ -87,10 +95,13 @@ for i in range(2010, 2022):
 #5. scatterplot this years flow vs last years flow for september
 fig, ax = plt.subplots()
 
-ax.scatter(data[(data['year'] == 2019) & (data['month'] == 9)].flow,  data[(data['year'] == 2020) & (data['month'] == 9)].flow, marker='p',
-           color='blueviolet')
-ax.set(xlabel='2019 flow', ylabel='2020 flow', yscale='log', xscale='log')
+ax.scatter(data[(data['year'] == 2018) & (data['month'] == 10)].flow,  data[(data['year'] == 2020) & (data['month'] == 10)].flow, marker='p',
+           color='red')
+ax.set(xlabel='2018 flow', ylabel='2020 flow', yscale='log', xscale='log')
 ax.legend()
+
+fig.set_size_inches(10,3)
+fig.savefig("Observed_Flow#3.png")
 
 # 6. Scatter plot of flow vs day of the month for september
 # Dots are colored by the year and sized acccording to the flow
@@ -109,16 +120,19 @@ fig, ax = plt.subplots(1,2)
 m = 9
 month_data = data[data['month'] == m]
 plot_title = 'Month ' + str(m)
-ax[0].hist(np.log10(month_data['flow']), bins=30, edgecolor='grey', color='steelblue')
+ax[0].hist(np.log10(month_data['flow']), bins=30, edgecolor='grey', color='limegreen')
 ax[0].set(xlabel='Log Flow cfs', ylabel='count', title=plot_title)
 
 m=10
 month_data = data[data['month'] == m]
 plot_title = 'Month ' + str(m)
 ax[1].hist(np.log10(month_data['flow']), bins=30,
-           edgecolor='grey', color='steelblue')
+           edgecolor='grey', color='violet')
 ax[1].set(xlabel='Log Flow cfs', ylabel='count', title= plot_title)
 plt.show()
+
+fig.set_size_inches(10,3)
+fig.savefig("Observed_Flow#4.png")
 
 #8. Same as 7 but using a for loop to do all 12 months
 fig, ax = plt.subplots(2, 2)
@@ -134,3 +148,37 @@ for m in range(9,13):
 plt.show()
 
 
+
+fig, ax = plt.subplots()
+ax.plot(data['datetime'], data['flow'], label='flow',color='green')
+ax.set(title="Observed Flow", xlabel="Date", ylabel="Weekly Avg Flow [cfs]",
+        yscale='log', xlim=[datetime.date(2018, 10, 1), datetime.date(2018, 10, 30)])
+ax.legend()
+plt.show()
+
+
+fig, ax = plt.subplots()
+ax.plot(data['datetime'], data['flow'], color='skyblue',
+        linestyle=":", label='daily')
+ax.set(title="Observed Flow", xlabel="Years", 
+        ylabel="Daily Avg Flow [cfs]",
+        yscale='log')
+ax.legend()
+
+fig.set_size_inches(10,3)
+fig.savefig("Observed_Flow#5.png")
+
+
+
+fig, ax = plt.subplots()
+ax.plot(data['datetime'], data['flow'], label='flow',color='hotpink')
+ax.set(title="Observed Flow", xlabel="Date", ylabel="Weekly Avg Flow [cfs]",
+        yscale='log', xlim=[datetime.date(2003, 10, 1), datetime.date(2003, 10, 30)])
+ax.legend()
+plt.show()
+
+fig.set_size_inches(10,3)
+fig.savefig("Observed_Flow#6.png")
+
+
+# %%
