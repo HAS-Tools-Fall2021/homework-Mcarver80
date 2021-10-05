@@ -2,9 +2,12 @@
 **Assignment 6**
 
 **10/04/2021**
+___
+## Grade
+3/3: Good work with the plotting. We'll talk in class tomorrow about how to get the plots into markdown and see me after class if you have questions.  In the future please expand on your forecast description explanation. Just saying you based it off of the plots is not sufficient I need more information about what your reasoning was. 
+__
 
 ### **Python Code and Explanation:**
-
 My forecast streamflow predictions for this week were based on the plots that I created. 
 
 *The plots are located within the Forecast Submissions folder and are named "Observed_Flow#1,2,3,4,5,6".*
